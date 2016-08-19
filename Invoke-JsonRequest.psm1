@@ -1,5 +1,5 @@
 ﻿function Invoke-JsonRequest ([string]$Uri)
 {
-    $response = curl $Uri
+    $response = Invoke-WebRequest $Uri
     ConvertFrom-Json $response.Content
 }
